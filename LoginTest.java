@@ -19,16 +19,16 @@ public class LoginTest {
     
     driver.manage().window().maximize();
         
-    //ReadConfigurationsFile RCF = new ReadConfigurationsFile();
+    ReadConfigurationsFile RCF = new ReadConfigurationsFile();
     
-    driver.get("https://magento2-demo.magebit.com/admin/");
-    //driver.get(RCF.getURL());
+    //driver.get("https://magento2-demo.magebit.com/admin/");
+    driver.get(RCF.getURL());
     
-    driver.findElement(By.id("username")).sendKeys("magebit");
-    //driver.findElement(By.id("username")).sendKeys(RCF.getUserName());
+    //driver.findElement(By.id("username")).sendKeys("magebit");
+    driver.findElement(By.id("username")).sendKeys(RCF.getUserName());
     
-    driver.findElement(By.id("login")).sendKeys("Demo123");    
-    //driver.findElement(By.id("login")).sendKeys(RCF.getPassword());
+    //driver.findElement(By.id("login")).sendKeys("Demo123");    
+    driver.findElement(By.id("login")).sendKeys(RCF.getPassword());
 
 }
 }
